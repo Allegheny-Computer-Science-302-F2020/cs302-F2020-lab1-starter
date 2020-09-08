@@ -40,14 +40,14 @@ jar {
   manifest {
     attributes(
         'Class-Path': configurations.compileClasspath.collect { it.getName() }.join(' '),
-        'Main-Class': 'labone.DisplayOutput'
+        'Main-Class': ''
         )
   }
 }
 
 // give the name of the application to run with "gradle run" command
 apply plugin: 'application'
-mainClassName = 'labone.DisplayOutput'
+mainClassName = ''
 
 // perform checkstyle checking with the "gradle check" command
 apply plugin: 'checkstyle'
